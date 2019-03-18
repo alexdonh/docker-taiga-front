@@ -18,6 +18,8 @@ COPY start.sh /
 COPY nginx.conf /etc/nginx/conf.d/
 COPY config.json /tmp/taiga-conf/
 
+RUN chmod +x /start.sh || true
+
 VOLUME ["/taiga-conf"]
 
 CMD ["/start.sh"]
