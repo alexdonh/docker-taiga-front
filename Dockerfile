@@ -8,7 +8,7 @@ WORKDIR /srv/taiga
 RUN apk --no-cache add git \
 	&& rm /etc/nginx/conf.d/default.conf \
 	&& mkdir /run/nginx \
-	&& git clone --depth=1 -b stable https://github.com/alexdonh/taiga-front-dist.git front && cd front \
+	&& git clone --depth=1 -b master https://github.com/alexdonh/taiga-front-dist.git front && cd front \
 	&& apk del git \
 	&& rm dist/conf.example.json
 
